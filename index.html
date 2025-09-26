@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr" class="h-full scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mateleau — Réservation de plongée & gestion pour clubs</title>
+    <meta name="description" content="Pour les plongeurs : réservez en quelques clics. Pour les clubs : gérez vos réservations et votre planning simplement.">
+
+    <!-- Open Graph / Partage -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mateleau — Réservation de plongée & gestion pour clubs" />
+    <meta property="og:description" content="Pour les plongeurs : réservez en quelques clics. Pour les clubs : gérez vos réservations et votre planning simplement." />
+    <meta property="og:url" content="https://mateleau.fr/" />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicons (remplacer les chemins si besoin) -->
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Palette brand (bleu clair, bleu marine, vert accent + dégradés sable/océan)
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                light: '#E6F2FF',   // bleu clair
+                mid:   '#143A66',   // bleu océan
+                dark:  '#0F1F3A',   // bleu marine
+                accent:'#15B588',   // vert
+                sand:  '#FFF6E6'    // sable léger
+              }
+            },
+            backgroundImage: {
+              'ocean-gradient': 'linear-gradient(135deg, #0F1F3A 0%, #143A66 50%, #15B588 100%)',
+              'sunrise': 'linear-gradient(180deg, #E6F2FF 0%, #FFF6E6 100%)'
+            }
+          }
+        }
+      };
+    </script>
+
+    <!-- SEO basique -->
+    <meta name="robots" content="index,follow" />
+  </head>
+
+  <body class="h-full bg-brand.sand text-slate-800 antialiased">
+    <!-- Bandeau "en construction" -->
+    <div class="w-full bg-yellow-100 text-yellow-900 text-center text-sm py-2">
+      🚧 Site en construction — Une version complète arrive bientôt.
+    </div>
+
+    <!-- Header + Hero -->
+    <header class="relative isolate text-white">
+      <div class="absolute inset-0 -z-10 bg-ocean-gradient"></div>
+      <!-- vague décorative -->
+      
+
+      <div class="mx-auto max-w-6xl px-4 py-8 flex items-center justify-between">
+        <a href="#top" class="flex items-center gap-3 group">
+          <div class="h-10 w-10 rounded-2xl bg-white/10 ring-1 ring-white/20 grid place-items-center font-bold">M</div>
+          <span class="text-xl font-semibold group-hover:opacity-90">Mateleau</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#plongeurs" class="hover:text-brand.sand">Plongeurs</a>
+          <a href="#clubs" class="hover:text-brand.sand">Clubs</a>
+          <a href="#contact" class="hover:text-brand.sand">Contact</a>
+          <a href="https://instagram.com/mate.leau" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 ring-1 ring-white/20 hover:bg-white/15">
+            <span>Instagram</span>
+            <span aria-hidden>↗</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Hero -->
+      <section class="mx-auto max-w-6xl px-4 pb-20 pt-6">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+              La réservation de plongée, <span class="text-brand.accent">simple et fluide</span>
+            </h1>
+            <p class="mt-4 text-base md:text-lg text-white/80">
+              Pour les <strong>plongeurs</strong> : réservez votre prochaine plongée en quelques clics.
+              Pour les <strong>clubs</strong> : centralisez vos réservations et gagnez du temps.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="#contact" class="rounded-xl px-5 py-3 bg-white/10 ring-1 ring-white/20 font-medium hover:bg-white/20">
+                Nous contacter
+              </a>
+              <a href="https://instagram.com/mate.leau" target="_blank" rel="noopener" class="rounded-xl px-5 py-3 bg-white/10 ring-1 ring-white/20 font-medium hover:bg-white/20">
+                Instagram
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="relative rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6 shadow-sm">
+              <div class="absolute -top-4 -left-4 h-16 w-16 rounded-2xl bg-brand.accent/30 blur-lg opacity-80 -z-10"></div>
+              <div class="absolute -bottom-4 -right-4 h-16 w-16 rounded-2xl bg-white/20 blur-lg opacity-70 -z-10"></div>
+              <ul class="space-y-3 text-sm text-white/90">
+                <li class="flex items-start gap-3"><span class="mt-1">✅</span> Réservation en quelques clics</li>
+                <li class="flex items-start gap-3"><span class="mt-1">✅</span> Planning centralisé en temps réel (clubs)</li>
+                <li class="flex items-start gap-3"><span class="mt-1">✅</span> Gestion des groupes & moniteurs</li>
+                <li class="flex items-start gap-3"><span class="mt-1">✅</span> Paiement sécurisé</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Sections valeur -->
+    <main>
+      <section id="plongeurs" class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-semibold text-brand.dark">Pour les plongeurs</h2>
+        <p class="mt-3 text-slate-700 max-w-2xl">Trouvez un club, choisissez votre créneau, réservez — c'est tout.</p>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="font-medium text-brand.mid">Recherche rapide</h3>
+            <p class="mt-2 text-sm text-slate-600">Filtres simples par date, niveau et localisation.</p>
+          </div>
+          <div class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="font-medium text-brand.mid">Réservation éclair</h3>
+            <p class="mt-2 text-sm text-slate-600">Interface épurée, confirmation immédiate.</p>
+          </div>
+          <div class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="font-medium text-brand.mid">Suivi pratique</h3>
+            <p class="mt-2 text-sm text-slate-600">Historique et infos utiles avant la plongée.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="clubs" class="bg-sunrise">
+        <div class="mx-auto max-w-6xl px-4 py-14">
+          <h2 class="text-2xl md:text-3xl font-semibold text-brand.dark">Pour les clubs</h2>
+          <p class="mt-3 text-slate-700 max-w-2xl">Gagnez du temps sur l'administratif, concentrez-vous sur l'eau.</p>
+          <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+              <h3 class="font-medium text-brand.mid">Planning centralisé</h3>
+              <p class="mt-2 text-sm text-slate-600">Vue d'ensemble des créneaux, équipes et bateaux.</p>
+            </div>
+            <div class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+              <h3 class="font-medium text-brand.mid">Gestion des réservations</h3>
+              <p class="mt-2 text-sm text-slate-600">Validation, modifications, annulations en un clic.</p>
+            </div>
+            <div class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+              <h3 class="font-medium text-brand.mid">Moins d'appels</h3>
+              <p class="mt-2 text-sm text-slate-600">Automatisez les confirmations et relances email.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Étapes -->
+      <section class="mx-auto max-w-6xl px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-semibold text-brand.dark">Comment ça marche</h2>
+        <ol class="mt-6 grid md:grid-cols-3 gap-6 list-decimal list-inside">
+          <li class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+            <span class="block font-medium text-brand.mid">Choisissez une date et un spot</span>
+            <span class="mt-2 block text-sm text-slate-600">Accédez aux disponibilités en temps réel.</span>
+          </li>
+          <li class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+            <span class="block font-medium text-brand.mid">Réservez / validez en ligne</span>
+            <span class="mt-2 block text-sm text-slate-600">Paiement sécurisé.</span>
+          </li>
+          <li class="rounded-2xl border border-brand.mid/15 bg-white p-6 shadow-sm hover:shadow-md transition">
+            <span class="block font-medium text-brand.mid">Plongez serein</span>
+            <span class="mt-2 block text-sm text-slate-600">Toutes les infos utiles au bon moment.</span>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-brand.light/60">
+      <div class="mx-auto max-w-6xl px-4 py-16">
+        <div class="rounded-3xl border border-brand.mid/10 p-8 md:p-10 bg-white shadow-sm">
+          <div class="md:flex items-center justify-between gap-8">
+            <div class="max-w-xl">
+              <h2 class="text-2xl md:text-3xl font-semibold text-brand.dark">Nous contacter</h2>
+              <p class="mt-3 text-slate-700">Une question, un partenariat, ou vous êtes un club intéressé ? Écrivez-nous.</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href="mailto:mateleau.contact@gmail.com" class="rounded-xl bg-brand.accent px-5 py-3  font-medium shadow hover:shadow-lg transition">mateleau.contact@gmail.com</a>
+                <a href="https://instagram.com/mate.leau" target="_blank" rel="noopener" class="rounded-xl bg-brand.accent px-5 py-3  font-medium shadow hover:shadow-lg transition">Instagram</a>
+              </div>
+            </div>
+            <div class="mt-8 md:mt-0">
+              <div class="rounded-2xl border border-dashed border-brand.dark/20 p-6 text-sm text-slate-700 bg-brand.sand">
+                <p class="font-medium text-brand.mid">Envie d'essayer Mateleau ?</p>
+                <p class="mt-2">La plateforme est en construction. Lancement à venir — suivez-nous sur Instagram pour les nouveautés.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-brand.dark text-white">
+      <div class="mx-auto max-w-6xl px-4 py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+        <p>© <span id="year"></span> Mateleau — Tous droits réservés • Toulouse, France</p>
+        <div class="flex items-center gap-4">
+          <a href="mailto:mateleau.contact@gmail.com" class="hover:text-brand.accent">mateleau.contact@gmail.com</a>
+          <a href="https://instagram.com/mate.leau" target="_blank" rel="noopener" class="hover:text-brand.accent">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // année dynamique
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
